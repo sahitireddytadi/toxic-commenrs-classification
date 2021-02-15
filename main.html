@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body{
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  padding:0;
+  margin:0;
+  background: linear-gradient(90.54224394649964deg, #5680E9, #84CEEB, #5AB9EA,#8860D0);}
+
+
+.form-section {
+            width: 500px;
+            margin: 0 auto;
+            margin-top: 10vh;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: -3px 4px 6px 0px rgba(185, 185, 185, 0.3);
+            position: relative;
+}
+  
+        .form-section label {
+            display: block;
+            font-size: 16px;
+        }
+
+        .form-section input {
+            display: block;
+            width: 95%;
+            padding: 7px;
+            border-radius: 3px;
+            border: 1px solid #aaaaaa;
+            font-size: 25px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+
+            outline: none;
+        }
+        [type="submit"].submit {
+            padding: 10px 7px;
+            border-radius: 20px;
+            background: linear-gradient(90.54224394649964deg, rgb(41, 72, 151), #84CEEB, rgb(36, 163, 226));
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            border: none !important;
+            margin: 0 auto;
+        }
+
+header{
+  background:linear-gradient(90.54224394649964deg, #5680E9, #84CEEB, #5AB9EA,#8860D0););
+  color: #ffffff;
+  padding-top:30px;
+    min-height:70px;
+    border-bottom: #ffffff  10px solid;
+}
+
+/* This controls the style of the result */
+div {
+    background-color:#ffffff;
+    width: 500px;
+    border: 2px solid rgb(36, 163, 226);
+    padding: 1px;
+    margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 150px;
+  margin-left: 510px;
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+  <header>
+        <h1 align="center"><strong>Toxic Comment Classifier</h1></strong></h1>
+  </header>
+<div class = "form-section"> 
+<form method="POST">
+  <input type="text"  align = "Center" placeholder="Enter a toxic comment" name="text" id="rcorners1" required>
+  <input type="submit" class="submit">
+</form></div>
+
+<div >
+
+Result:<br />
+<ul>
+<li>Toxic: {{ pred_toxic }}</li>
+<li>Severely toxic: {{ pred_severe_toxic }}</li> 
+<li>Identity hate: {{ pred_identity_hate }} </li>
+<li>Insult: {{ pred_insult }}</li>
+<li>Obscene: {{ pred_obscene }}</li>
+<li>Threat: {{ pred_threat }} </li>
+</ul>
+</div>
+<br/>
+</body>
+</html>
+
